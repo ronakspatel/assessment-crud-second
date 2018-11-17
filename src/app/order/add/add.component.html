@@ -1,0 +1,63 @@
+<div>
+
+    <form [formGroup]="profileForm" (ngSubmit)="onSubmit(profileForm.value)" id="msform" novalidate>
+        <div>
+            <h3>Add Record</h3>
+        </div>
+        <fieldset>
+            <div>
+                <h1 class="fs-title">Order Details</h1><br><br>
+            </div>
+
+
+            <div class="input-group">
+                DeliveryDate: <input class="form-control" style="float:none" placeholder="Select a date"
+                    ngx-mydatepicker name="myDate" formControlName="deliveryDate" [options]="myOptions" #dp="ngx-mydatepicker"
+                    (click)="dp.toggleCalendar()" />
+                <div *ngIf="(profileForm.get('deliveryDate').touched || profileForm.get('deliveryDate').dirty ) && profileForm.get('deliveryDate').errors"
+                    class="alert alert-danger">
+                    <div *ngIf="profileForm.get('deliveryDate').errors.required">
+                        Required Date cannot be left blank.
+                    </div>
+                </div>
+            </div>
+
+            <div formGroupName="product">
+                <h3 class="fs-title">Product Details:</h3>
+                <div>
+                    Id:<input type="number" placeholder="" formControlName='productId'>
+                    
+                </div>
+                <div>
+                    Name:<input type="text" placeholder="" formControlName='name'>
+                </div>
+                <div>
+                    Price:<input type="number" placeholder="" formControlName='price'>
+                </div>
+
+            </div>
+            <div formGroupName="customer">
+                <h3 class="fs-title">Customer Details:</h3>
+                <div>
+                    Id:<input type="number" placeholder="" formControlName='customerId'>
+                </div>
+                <div>
+                    FirstName:<input type="text" placeholder="" formControlName='firstName'>
+                </div>
+                <div>
+                    Lastname:<input type="text" placeholder="" formControlName='lastName'>
+                </div>
+                <div>
+                    Address:<input type="text" placeholder="" formControlName='address'>
+                </div>
+                <div>
+                    Email:<input type="text" placeholder="" formControlName='email'>
+                </div>
+                <div>
+                    ContectNo:<input type="number" placeholder="" formControlName='contectNo'>
+                </div>
+            </div>
+            <input type="submit" [disabled]="!profileForm.valid" class="btn btn-success" />
+        </fieldset>
+    </form>
+</div>

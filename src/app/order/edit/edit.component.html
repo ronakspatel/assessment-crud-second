@@ -1,0 +1,37 @@
+<div>
+
+    <form [formGroup]="profileForm" (ngSubmit)="onSubmit(profileForm.value)" id="msform" novalidate><div>
+      <h3>Edit Record</h3>
+    </div>
+        <fieldset>
+            <div>
+                <h1 class="fs-title">Order Details</h1><br><br>
+            </div>
+           
+            <div>
+                Id:<input type="number" placeholder="" formControlName='id'>
+               
+            </div>
+            <div formGroupName="product">
+              <h3 class="fs-title">Product Details:</h3>
+              
+                Id:<input type="number" placeholder="" formControlName='productId'>
+                Name:<input type="text" placeholder="" formControlName='name'>
+                Price:<input type="number" placeholder="" formControlName='price'>
+              
+            </div>
+            <div formGroupName="customer">
+                <h3 class="fs-title">Customer Details:</h3>
+
+                Id:<input type="number" placeholder="" formControlName='customerId'>
+                FirstName:<input type="text" placeholder="" formControlName='firstName'>
+                Lastname:<input type="text" placeholder="" formControlName='lastName'>
+                Address:<input type="text" placeholder="" formControlName='address'>
+                Email:<input type="text" placeholder="" formControlName='email'>
+                ContectNo:<input type="number" placeholder="" formControlName='contectNo'>
+            </div>
+            <input type="submit" [disabled]="!profileForm.valid" class="btn btn-success" />
+        </fieldset>
+    </form>
+</div>
+<p>FormValue:{{profileForm.value|json}}</p>

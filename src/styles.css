@@ -1,1 +1,111 @@
 /* You can add global styles to this file, and also import other style files */
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+.headerleft{
+    float: left;
+    color: #c2f1df;
+    font-size: 25px;}
+.headerright{
+    float: right;}
+.but{
+background-color: #4e504b;
+color: #ffff;}
+
+.header1{
+position: absolute;
+left: 0px;
+width: 98.57%;
+background-color: #4e504b;
+padding: 10px;
+height: 30px;}
+
+.div1 {
+position: absolute;
+left: 0;
+bottom: 0;
+top: 88px;
+
+height: 90%;
+overflow: hidden;
+background: rgb(236, 231, 231);
+width: 150px;
+border-right: 4px solid rgb(241, 236, 236);
+}
+.foot {
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+height: 50px;
+background-color: #222222;
+color: #909090;
+font-size: 80%;
+padding: 14px 0px 10px 0px;
+-webkit-box-shadow: 2px 2px 4px 0px #444444;
+box-shadow: 2px 2px 4px 0px #444444;
+text-align: right;
+z-index: 1000;
+}
+.side{
+margin-top: 60px;
+position: absolute;
+left: 200px;
+
+width: 85%;
+height: 50%;
+
+}
+img{
+
+border: 3px solid;
+width: 250px;
+height: 250px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+float: left;
+margin: 30px 30px;
+    
+}
+h2{
+float: left;
+}
+
+.topnav {
+overflow: hidden;
+background-color:rgb(236, 231, 231);
+}
+
+.topnav a {
+float: left;
+color: #111010;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 17px;
+}
+
+.topnav a:hover {
+background-color: #ddd;
+color: black;
+}
+
+.topnav a.active {
+background-color: #4CAF50;
+color: white;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #4CAF50;
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
