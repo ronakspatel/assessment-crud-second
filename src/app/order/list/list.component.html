@@ -17,10 +17,10 @@
   <tr *ngFor='let order of orders'>
     <th>{{order.id}}</th>
     <th>{{order.deliveryDate |date}}</th>
-    <th>{{order.product.productId}}</th>
+    <th>{{order.product.id}}</th>
     <th>{{order.product.name}}</th>
     <th>{{order.product.price}}</th>
-    <th>{{order.customer.customerId}}</th>
+    <th>{{order.customer.id}}</th>
     <th>{{order.customer.firstName}}</th>
     <th>{{order.customer.lastName}}</th>
     <th>{{order.customer.address}}</th>

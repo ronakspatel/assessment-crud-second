@@ -15,10 +15,10 @@ import { Order } from '../../order.model';
 })
 export class ListComponent implements OnInit {
   //to store order array type data.
-  public orders:Order[];
+  public orders: Order[];
 
-  constructor(private service:OrderService) { 
-    this.orders=[];
+  constructor(private service: OrderService) {
+    this.orders = [];
   }
 
   ngOnInit() {
@@ -27,15 +27,15 @@ export class ListComponent implements OnInit {
   /**
    * Gets orders get data from service and store in orders .
    */
-  private getOrders():void{
-    this.service.getOrders().subscribe(orders=>this.orders=orders)
+  private getOrders(): void {
+    this.service.getOrders().subscribe(orders => this.orders = orders)
   }
   /**
    * Deletes order for delete record 
    * @param id 
    */
-  public deleteOrder(id:number):void{
-    this.service.deleteOrder(id).subscribe(()=>this.getOrders());
+  public deleteOrder(id: number): void {
+    this.service.deleteOrder(id).subscribe(() => this.getOrders());
   }
 
 }

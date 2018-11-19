@@ -24,7 +24,7 @@ export class Order{
  * @prop - price represent number type.
  */
 export class Product{
-    productId:number;
+    id:number;
     name:string;
     price:number;
 
@@ -34,7 +34,7 @@ export class Product{
  * @description -This class represent model customer class.
  */
 export class Customer{
-    customerId:number;
+    id:number;
     firstName:string;
     lastName:string;
     address:string;

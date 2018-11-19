@@ -21,8 +21,8 @@ export class AddComponent implements OnInit {
   public profileForm: FormGroup;
 
   constructor(private service: OrderService,
-     private fb: FormBuilder,
-      private router: Router) {
+    private fb: FormBuilder,
+    private router: Router) {
 
   }
 
@@ -34,12 +34,12 @@ export class AddComponent implements OnInit {
     this.profileForm = this.fb.group({
       deliveryDate: ['', Validators.required],
       product: this.fb.group({
-        productId: ['', Validators.required],
+        id: ['', Validators.required],
         name: ['', Validators.required],
         price: ['', Validators.required]
       }),
       customer: this.fb.group({
-        customerId: ['', Validators.required],
+        id: ['', Validators.required],
         firstName: ['', Validators.required],
         lastName: ['', Validators.required],
         address: ['', Validators.required],
@@ -48,6 +48,42 @@ export class AddComponent implements OnInit {
       })
     })
   }
+  // order
+ public get deliveryDate() {
+    return this.profileForm.get('deliveryDate');
+  }
+
+  //product 
+ public get productId() {
+    return this.profileForm.get('product.id');
+  }
+ public get name() {
+    return this.profileForm.get('product.name');
+  }
+ public get price() {
+    return this.profileForm.get('product.price');
+  }
+
+  //customer
+ public get customerId() {
+    return this.profileForm.get('customer.id');
+  }
+ public get firstName() {
+    return this.profileForm.get('customer.firstName');
+  }
+ public get lastName() {
+    return this.profileForm.get('customer.lastName');
+  }
+ public get address() {
+    return this.profileForm.get('customer.address');
+  }
+ public get email() {
+    return this.profileForm.get('customer.email');
+  }
+ public get contectNo() {
+    return this.profileForm.get('customer.contectNo');
+  }
+
   /**
    * Determines whether submit on to submite updated data and send to service.
    * @param order to stode fromData.
